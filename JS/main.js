@@ -9,7 +9,6 @@ async function fetchJSON(url) {
   }
 }
 
-// Виклик:
 fetchJSON("https://test.smarto.agency/smarto_complexes_list.json")
   .then(data => {
     console.log("Отримали JSON:", data);
