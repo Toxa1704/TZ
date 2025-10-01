@@ -10,6 +10,9 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: #0A0F13;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .logo{
     position: fixed;
@@ -17,7 +20,6 @@ body{
     font-size: 32.418px;
     line-height: 90%;
     letter-spacing: -0.04em;
-    color: #0A0F13;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,6 +31,7 @@ body{
     top: 24px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 16px;
+    z-index: 10;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -109,4 +112,135 @@ body{
 }
 .card13{
         background-image: url(/img/slide3.webp);
+}
+
+
+.buildings {
+    max-width: 1800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 0 60px;
+}
+#complex-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.complex-card {
+    margin-top: 100px;
+    position: relative;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 12px;
+    gap: 28px;
+    width: 440px;
+    background: #EFF3F5;
+    border-width: 1px 1px 0px 1px;
+    border-style: solid;
+    border-color: rgba(168, 168, 168, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    align-self: stretch;
+    box-shadow: 0px 2px 0px #E1E4E6;
+}
+.pin{
+    position: absolute;
+    top: -25px;
+    left: 45%;
+    z-index: 1;
+}
+.card-down{
+    position: relative;
+    bottom: -44px;
+    left: -13px;
+    /* box-shadow: 0px 2px 0px #E1E4E6; */
+}
+.card-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card-year {
+font-weight: 500;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: -0.02em;
+
+}
+.card-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    border: 1px solid #A8A8A8;
+    border-radius: 1000px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+.card-img{
+    width: 100%;
+}
+.card-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+}
+.card-location {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+}
+.card-type-of-works {
+    height: 60px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #0A0F13;
+}
+.works-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 0px;
+    gap: 2px;
+}
+.card-works-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 10px;
+    border: 1px solid rgba(168, 168, 168, 0.2);
+    border-radius: 1000px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px auto;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: 1px solid #0A0F13;
+    width: 153px;
+    height: 21px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #0A0F13;
 }
