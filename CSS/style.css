@@ -155,8 +155,8 @@ body{
     position: relative;
     bottom: -44px;
     left: -13px;
-    box-shadow: 0px 2px 0px #E1E4E6;
 }
+
 .card-top {
     width: 100%;
     display: flex;
@@ -273,4 +273,78 @@ border-bottom: 1px solid #0A0F13;
 .tag-type:focus{
     color: #293d4d;
 border-bottom: 1px solid #0A0F13;
+}
+
+.contacts{
+    padding: 0 60px;
+}
+.decoretion{
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 20px;
+width: 880px;
+}
+.hr{
+width: 744px;
+height: 1px;
+background: #0A0F13;
+opacity: 0.2;
+}
+.smarto{
+font-weight: 500;
+font-size: 14px;
+line-height: 140%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: #0A0F13;
+}
+.map{
+    display: none;
+    margin-bottom: 60px;
+    position: absolute;
+    translate:20% -50%;
+}
+.contact-title{
+font-weight: 400;
+font-size: 96px;
+line-height: 90%;
+letter-spacing: -0.04em;
+color: #0A0F13;
+}
+.map-title{
+font-weight: 600;
+font-size: 24px;
+line-height: 120%;
+letter-spacing: -0.02em;
+color: #0A0F13;
+}
+.map-text a{
+    text-decoration: none;
+font-weight: 500;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: -0.02em;
+color: #0A0F13;
+}
+.map-btn{
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 13px 20px;
+gap: 8px;
+background: #0A0F13;
+border-radius: 100px;
+font-weight: 500;
+font-size: 14px;
+line-height: 140%;
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: #EFF3F5;
 }
