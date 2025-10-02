@@ -10,13 +10,15 @@ async function fetchJSON(url) {
 }
 
 const list = document.getElementById("complex-list");
-                list.innerHTML = ""; 
 const loadMoreBtn = document.getElementById("loadMore");
-let data = [];            // масив з JSON
-let currentIndex = 0;     // початковий індекс
+list.innerHTML = "";
+
+let data = [];            // усі дані з JSON
+let filteredData = [];    // відфільтровані дані
+let currentIndex = 0;     // поточний індекс
 const step = 3;           // по скільки показувати
 
-// функція для створення однієї картки
+// створення однієї картки
 function createCard(item) {
   const li = document.createElement("div");
   li.classList.add("complex-card");   
@@ -39,18 +41,32 @@ function createCard(item) {
   return li;
 }
 
-// функція для показу наступних елементів
+// рендер елементів (показує наступні step)
 function renderItems() {
-  const slice = data.slice(currentIndex, currentIndex + step);
+  const slice = filteredData.slice(currentIndex, currentIndex + step);
   slice.forEach(item => {
+    console.log(item)
     list.appendChild(createCard(item));
   });
   currentIndex += step;
 
-  // якщо всі елементи показані — ховаємо кнопку
-  if (currentIndex >= data.length) {
+  // ховаємо кнопку якщо більше нема що показати
+  if (currentIndex >= filteredData.length) {
     loadMoreBtn.style.display = "none";
+  } else {
+    loadMoreBtn.style.display = "flex";
   }
+}
+
+// зміна фільтру
+function applyFilter(type) {
+  list.innerHTML = ""; // очистка списку
+  currentIndex = 0;
+  filteredData = (type === "all") 
+    ? data 
+    : data.filter(item => item.type === type);
+
+  renderItems(); // показати перші step елементів
 }
 
 // завантажуємо JSON і показуємо перші 3
@@ -58,9 +74,19 @@ fetchJSON("https://test.smarto.agency/smarto_complexes_list.json")
   .then(json => {
     if (Array.isArray(json)) {
       data = json;
-      renderItems(); // перші 3
+      filteredData = data; // початково всі
+      renderItems(); 
     }
   });
 
-// клік на кнопку
+// кнопка "Показати ще"
 loadMoreBtn.addEventListener("click", renderItems);
+
+// кліки по фільтрам
+document.querySelectorAll("#filter li").forEach(li => {
+  li.addEventListener("click", () => {
+    const type = li.getAttribute("data-type");
+    console.log(type)
+    applyFilter(type);
+  });
+});

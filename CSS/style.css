@@ -155,7 +155,7 @@ body{
     position: relative;
     bottom: -44px;
     left: -13px;
-    /* box-shadow: 0px 2px 0px #E1E4E6; */
+    box-shadow: 0px 2px 0px #E1E4E6;
 }
 .card-top {
     width: 100%;
@@ -243,4 +243,34 @@ letter-spacing: -0.02em;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #0A0F13;
+}
+
+.list-type{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 60px;
+}
+
+.tag-type{
+    list-style: none;
+    cursor: pointer;
+    height: 29px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #0A0F13;
+    border-bottom: 1px solid transparent;
+    transition: color .3s ease-in-out, border-bottom-color .3s ease-in-out;
+}
+.tag-type:hover{
+    color: #596e80;
+border-bottom: 1px solid #0A0F13;
+}
+.tag-type:focus{
+    color: #293d4d;
+border-bottom: 1px solid #0A0F13;
 }
