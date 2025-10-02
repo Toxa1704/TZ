@@ -5,6 +5,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 body{
     font-family: "Inter Tight", sans-serif;
     font-optical-sizing: auto;
@@ -13,9 +17,10 @@ body{
     color: #0A0F13;
     max-width: 1920px;
     margin: 0 auto;
+    background-color: #EFF3F5;
 }
 .logo{
-    position: fixed;
+    position: absolute;
     margin: 0 auto;
     font-size: 32.418px;
     line-height: 90%;
@@ -231,7 +236,8 @@ letter-spacing: -0.02em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 60px auto;
+    margin: 0 auto;
+    margin-top: 100px;
     cursor: pointer;
     background-color: transparent;
     border-bottom: 1px solid #0A0F13;
@@ -276,7 +282,8 @@ border-bottom: 1px solid #0A0F13;
 }
 
 .contacts{
-    padding: 0 60px;
+    /* margin-top:210px ; */
+    padding: 210px 60px;
 }
 .decoretion{
     margin-bottom: 60px;
@@ -289,7 +296,7 @@ justify-content: center;
 align-items: center;
 padding: 0px;
 gap: 20px;
-width: 880px;
+width: 100%;
 }
 .hr{
 width: 744px;
@@ -325,13 +332,17 @@ line-height: 120%;
 letter-spacing: -0.02em;
 color: #0A0F13;
 }
-.map-text a{
+.map-text a,.email a,.legal-department a{
     text-decoration: none;
 font-weight: 500;
 font-size: 20px;
 line-height: 120%;
 letter-spacing: -0.02em;
 color: #0A0F13;
+}
+.map-text a:hover,.email a:hover,.legal-department a:hover{
+    color: #2b4051;
+    
 }
 .map-btn{
 display: flex;
@@ -347,4 +358,101 @@ line-height: 140%;
 letter-spacing: -0.02em;
 text-transform: uppercase;
 color: #EFF3F5;
+}
+.map-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 23px;
+}
+.block-map{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 41px;
+}
+.map-soc-icon,.tel,.email{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 23px;
+}
+.icon-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.block-map-soc,.block-tel-email{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.accounting-tel,.legal-tel{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.contact-img{
+    width: 100%;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* position: relative; */
+}
+.contact-text-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 84px;
+}
+.img-title1,.img-title2{
+    padding: 50px 30px;
+font-weight: 400;
+font-size: 96px;
+line-height: 90%;
+letter-spacing: -0.04em;
+color: #EFF3F5;
+mix-blend-mode: exclusion;
+}
+.img1,.img2{
+width: 680px;
+height: 680px;
+border-radius: 390px;
+
+}
+.img1{
+    background: url(/img/Ellipse\ 503.png);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    translate: -555px ;
+    z-index: -1;
+}
+.img2{
+background: linear-gradient(171.95deg, rgba(10, 15, 19, 0) 70.93%, rgba(10, 15, 19, 0.4) 97.87%), url(/img/Ellipse\ 502.png);
+}
+.group-img{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: -2;
+}
+.contacts-wrapper{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 90px;
+}
+.contacts{
+    margin-top: 100px;
+    padding: 0 60px;
+}
+.img-title2{
+    align-self: flex-end;
 }
