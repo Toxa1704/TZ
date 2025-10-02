@@ -90,3 +90,19 @@ document.querySelectorAll("#filter li").forEach(li => {
     applyFilter(type);
   });
 });
+
+const btnMaps = document.querySelector('.map-btn');
+const map = document.querySelector('.map');
+
+// Відкрити карту
+btnMaps.addEventListener("click", (e) => {
+  e.stopPropagation(); // щоб клік по кнопці не закрив одразу
+  map.style.display = "block";
+});
+
+// Закрити при кліку поза map
+document.addEventListener("click", (e) => {
+  if (map.style.display === "block" && !map.contains(e.target) && !btnMaps.contains(e.target)) {
+    map.style.display = "none";
+  }
+});

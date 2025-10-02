@@ -282,7 +282,6 @@ border-bottom: 1px solid #0A0F13;
 }
 
 .contacts{
-    /* margin-top:210px ; */
     padding: 210px 60px;
 }
 .decoretion{
@@ -345,6 +344,7 @@ color: #0A0F13;
     
 }
 .map-btn{
+    border: none;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -358,6 +358,11 @@ line-height: 140%;
 letter-spacing: -0.02em;
 text-transform: uppercase;
 color: #EFF3F5;
+cursor: pointer;
+transition: background-color .3s ease-in-out;
+}
+.map-btn:hover{
+    background-color: #4a6e8d;
 }
 .map-text{
     display: flex;
